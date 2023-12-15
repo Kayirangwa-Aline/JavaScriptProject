@@ -1,0 +1,33 @@
+
+div{
+    background-color: rgb(182, 25, 140);
+    float: left;
+    margin: 0px;
+    padding: 10px;
+    text-decoration: none;
+}
+.{
+    background-color: rgb(182, 25, 140);
+    float: left;
+    margin: 0px;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    text-align: center;  
+}
+a{
+     float: left;
+    margin: 0px;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    text-align: center;  
+    background-color: rgb(182, 25, 140);
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+ a a:hover{
+    background-color: azure;
+    color: black;
+ }

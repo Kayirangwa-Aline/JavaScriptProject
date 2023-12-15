@@ -1,0 +1,75 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+   
+}
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.header{
+display: flex;
+justify-content:space-between ;
+align-items: center;
+padding: 30px 10px;
+}
+.nav2 li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.nav3 li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+    justify-content: space-between;
+    
+}
+.logo1{
+    margin-right: 800px;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+.logo2{
+    margin-right:auto;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.logo3{
+    margin-left:auto;
+    cursor: pointer;
+    order: 3;
+}
+.nav1 li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav li a{
+    transition: all 0.3s ease 0s;
+}
+.nav li a:hover{
+    color: #0088a9;
+}
+button{
+    padding: 9px 25px;
+    background-color: aqua;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 40px;
+}
+button:hover{
+     background-color: rgb(201, 135, 49);
+}

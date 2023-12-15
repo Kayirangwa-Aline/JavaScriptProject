@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>am out</h5>
+    <button type="submit" onclick="allbalance()">balance</button>
+    <button type="submit" onclick="deposite()">deposit</button>
+    <button type="submit" onclick="withdrow()">withdrow</button>
+
+     <script>
+        let balance = 0;
+        function allbalance(){
+            alert("balance is"+ balance);
+        }
+
+function deposite(){
+    const amount = Number(prompt("enter your amount"));
+    if(!isNaN(amount) && amount > 0){
+        balance += amount;
+    alert("successfully" + amount + "your new bal is" + balance);
+    }else{
+        alert("invalid amount");
+    }
+}
+
+function withdrow(){
+    const amount = Number(prompt("enter your amount"));
+    if(!isNaN(amount) && amount > 0){
+        balance -= amount;
+        alert("insuficient amount");
+   
+    }else{
+        alert("successfully" + amount + "your new bal is" + balance);
+    }
+}
+    </script>
+</body>
+</html>

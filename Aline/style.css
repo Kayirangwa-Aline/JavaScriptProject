@@ -1,0 +1,25 @@
+
+.li,ul,a{
+
+    margin: 15px;
+    padding: 15px;
+    float: left;
+    text-decoration: none;
+    width: 10px;
+    height: 10px; 
+}
+body{
+
+    margin: 0px;
+    padding: 15px;
+    float: left;
+    text-decoration: none;
+}
+.a{
+   margin: 15px;
+    padding: 10px;
+    float: left;
+    text-decoration: none;
+    width: 10px;
+    height: 10px; 
+}  

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      table,  th,td {
+        border:1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 5px;
+        border-spacing: 15px;
+        background-color: aqua;
+
+      }
+      table th{
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body style="background-color:bisque;">
+    <table>
+        <caption><h1>TIMETABLE</h1></caption>
+        <tr>
+            <th><b><br>Day/Period<b></th>
+            <th><b>I<br> 10:30-10:20<b></th>
+            <th><b>II<br>10:20-11:10<b></th>
+            <th><b>III<br> 11:10-12:00<b></th>
+            <th><b><br> 12:00-12:40<b></th>
+            <th><b>IV<br>12:40-13:30<b></th>
+            <th><b>V<br>13:30-2:20<b></th>
+            <th><b>VI<br>2:20-3:10<b></th>
+            <th><b>VII<br>3:10-4:00<b></th>
+        </tr>
+        <tr>
+            <td><b>Monday<b></td>
+            <td>Eng</td>
+            <td>Math</td>
+            <td>Che</td>
+           <td rowspan="6">L<br>U<br>N<br>C<br>H</td>
+            <td colspan="3">LAB</td>
+            <td>Phy</td>
+
+        </tr>
+        <tr>
+            <td><b>Tuesday<b></td>
+            <td colspan="3">LAB</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Math</td>
+            <td>SPORTS
+                <ul style="list-style-type:square;">
+                    <li>football</li>
+                    <dl>
+                        <dt>name</dt>
+                        <dd>-Aline</dd>
+                    </dl>
+                    <li>volleyball</li>
+                    <li>basketball</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Wednesday<b></td>
+            <td>Math</td>
+            <td>phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LIBRARY</td>
+        </tr>
+        <tr>
+            <td><b>Thurday<b></td>
+            <td>phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LAB</td>
+            <td>Math</td>
+        </tr>
+        <tr>
+            <td><b>Friday<b></td>
+            <td colspan="3">LAB</td>
+            <td>Math</td>
+            <td>Che</td>
+            <td>Eng</td>
+            <td>Phy</td>
+        </tr>
+        <tr>
+            <td><b>Saturday<b></td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Math</td>
+            <td colspan="3">SEMINALS</td>
+            <td>SPORTS
+                <ol type="i">
+                    <li>football</li>
+                    <li>volleyball</li>
+                    <li>basketball
+                </ol>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

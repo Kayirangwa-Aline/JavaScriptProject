@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+<body style="background-color: darkgrey;">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="myId">
+        <button onclick="getTextAndClear()">Get Text</button>
+        <script>
+            function getTextAndClear() {
+                var inputValue = document.getElementById('myId').value;
+                console.log(inputValue);
+                document.getElementById('myId').value = '';
+            }
+        </script>
+    </body>
+    </html>
+</body>
+</html>

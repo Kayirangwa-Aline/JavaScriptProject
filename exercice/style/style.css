@@ -1,0 +1,27 @@
+body{
+    background-color: aquamarine;
+}
+ul{
+    list-style-type:none;
+    margin: 0px;
+    padding:0px;
+    text-align: center;
+    float: left;
+    
+}
+li{
+    float: left;
+    padding: 10px;
+    font-weight: bold;
+    background-color: blueviolet;
+}
+li a{
+    display: block;
+    color:brown;
+    text-decoration: none;
+
+}
+li a:hover{
+   background-color: azure;
+   color: black;
+}

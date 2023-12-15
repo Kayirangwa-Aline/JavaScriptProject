@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function that reqwire user to enter temp</title>
+</head>
+<body>
+    <script>
+        let temperatures = []
+let sum;
+let numT;
+let meanTemp;
+function getTemp(){
+    numT = Number(prompt("how many total temperatures do you want to enter: ",numT));
+    for(let i = 0; i< numT;i++){
+        temperatures[i] = Number(prompt(`enter temp ${i}: `));
+    }
+}
+ function getMeanTemp(temperatures) {
+      sum = 0;
+      for (let i = 0; i < temperatures.length; i++) {
+      sum += temperatures[i];
+     }
+    meanTemp = sum / temperatures.length;
+ }
+ getTemp();
+ getMeanTemp();
+ console.log(`Mean Temp : ${meanTemp}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    border: 2px solid green;
+}
+.kid2{
+    border:  1px solid blue;
+    display: flex;
+    background-color: bisque;
+    width: 50%;
+    gap: 10px 
+}
+.reaction{
+    color: red;
+}
+.percentage{
+    color: black;
+    font-weight: 900;
+}

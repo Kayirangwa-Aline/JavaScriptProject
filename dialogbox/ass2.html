@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment2</title>
+</head>
+<body style="background-color: antiquewhite;">
+    Greetings:
+    <style>
+        .alert {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            background-color: #79c0f3;
+            color: white;
+            border-radius: 0.5rem;
+            z-index: 0000;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="myId">
+    <button onclick="getTextAndShowAlert()">Send Text</button>
+    <div class="alert" id="myAlert">
+        Hello, I hope you're doing well!!
+    </div>
+    <script>
+        function getTextAndShowAlert() {
+            var inputValue = document.getElementById('myId').value;
+            console.log(inputValue);
+            document.getElementById('myId').value = '';
+            var alertBox = document.getElementById('myAlert');
+            alertBox.style.display = 'block';
+            setTimeout(function() {
+                alertBox.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

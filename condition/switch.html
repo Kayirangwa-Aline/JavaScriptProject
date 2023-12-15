@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//          let gate = prompt("Choose gate: a, b, or c");
+// let win = false;
+//  switch (gate) {
+//     case "a":
+//      alert("Gate A: empty");
+//       break;
+//      case "b":
+//       alert("Gate B: main prize");
+//      win = true;
+//       break;
+//      case "c":
+//       alert("Gate C: empty");
+//       break;
+//      default:
+//      alert("No gate " + String(gate));
+//  }
+//  if (win) {
+//    alert("Winner!");
+// }
+
+//  let isUserReady = confirm("Are you ready?");
+//  console.log(isUserReady);
+//  if (isUserReady) {
+//      alert("User ready!");
+//  }else{
+//     alert("not ready!!");
+//  }
+
+//  let number = prompt("Enter a number", 0);
+// if (number < 10) {
+//      alert("<10");
+//  } else if (number < 30) {
+//      alert("<30");
+//  } else if (number < 60) {
+//      alert("<60");
+// } else if (number < 90) {
+//      alert("<90");
+//  } else if (number < 100) {
+//      alert("<100");
+//  } else if (number == 100) {
+//      alert("100")
+//  } else {
+//      alert(">100")
+//  }
+
+
+
+// let startNumber = parseInt(prompt("Enter the starting number:"));
+// let endNumber = parseInt(prompt("Enter the ending number:"));
+
+
+// if (isNaN(startNumber) || isNaN(endNumber) || startNumber <= endNumber) {
+//     console.log("Please enter valid numbers");
+// } else {
+//     while (startNumber >= endNumber) {
+//         console.log(startNumber);
+//         startNumber -= 10;
+//     }
+// }
+
+let firstnumber = Number(prompt("Enter first number"));
+
+let lastnumber = Number(prompt("Enter last number"));
+
+if (!Number.isNaN(firstnumber) && !Number.isNaN(lastnumber) && firstnumber > lastnumber) {
+
+for (i = firstnumber; i >= lastnumber; i -= 10) {
+
+console.log(i);
+
+}
+
+}
+    </script>
+</body>
+</html>

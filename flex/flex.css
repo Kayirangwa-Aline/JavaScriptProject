@@ -1,0 +1,29 @@
+.container-1{
+    display: flex;
+    justify-content: center;
+    
+    /* margin-left: 600px;
+    margin-right: 600px; */
+
+}
+.container-1 div{
+    border: 1px solid red;
+    padding: 10px; 
+    width: 80px;
+    align-items: stretch;
+}
+.box-1{
+ 
+  order: 2;
+  
+}
+.box-2{
+    
+    order: 3;
+    
+}
+.box-3{
+    
+    order: 1;
+    
+}

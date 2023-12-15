@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment3</title>
+</head>
+<body style="background-color: lightslategray;">
+  <button onclick="checkAccount()"> Your welcome here!!</button>
+  <script>
+    function checkAccount() {
+      var hasAccount = confirm("Do you have an account?");
+      if (hasAccount) {
+        window.location.href = "signIn.html";
+      } else {
+        window.location.href = "signUp.html";
+      }
+    }
+  </script>
+</body>
+</html>

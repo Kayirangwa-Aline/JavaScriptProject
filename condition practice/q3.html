@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question3</title>
+</head>
+<body>
+    <script>
+        let x = prompt("enter first number");
+        let sign = prompt("choose between these operators +, -, / or *");
+        let y = prompt("enter second number");
+        switch(sign){
+            case "+":
+               let sum = x + y;
+                alert(sum);
+                break;
+                case "-":
+               let sub = x - y;
+                alert(sub);
+                break;
+                case "/":
+               let div = x / y;
+                alert(div);
+                break;
+                case "*":
+               let mult = x * y;
+                alert(mult);
+                break;
+                if(x === NaN && y === NaN){
+                    alert('NaN');
+                }
+                default:
+                    alert("invalid operator");
+        } 
+    </script>
+</body>
+</html>

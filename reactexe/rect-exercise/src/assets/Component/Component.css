@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 20px; 
+    border-radius: 20px;
+}
+.position{
+    margin-right: 90%;
+}
+ .all .img{
+    border-radius: 20%;
+}
+.text{
+    margin-bottom: 50px;
+}
+.title{
+    margin-bottom: 50px;
+    margin-left: 30%;
+}
+.text p{
+    font-weight: 80%;
+    font-size: 20px;
+}

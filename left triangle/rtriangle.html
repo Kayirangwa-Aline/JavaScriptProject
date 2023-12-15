@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Right Triangle</title>
+  <style>
+    pre {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<pre id="output"></pre>
+
+<script>
+  function displayRightTriangle(height) {
+    let triangle = '';
+    for (let i = 1; i <= height; i++) {
+      triangle += '*'.repeat(i) + '\n';
+    }
+    return triangle;
+  }
+
+  const triangleHeight = 5;
+  const triangleCode = displayRightTriangle(triangleHeight);
+
+
+  document.getElementById('output').innerText = triangleCode;
+</script>
+
+</body>
+</html>
