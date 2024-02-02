@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom project2 </title>
+  <style>
+     button{
+    background-color: grey;
+    color: white;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+   }
+   input{
+    border: 2px solid black;
+    font-size: 20px;
+   }
+   p{
+    font-size: 20px;
+   }
+   .cost-input{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   }
+  </style>
+</head>
+<body>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping</p>
+  <p>Orders over $40 = FREE shipping</p>
+  <input placeholder="Cost of order " class="input cost-input"> 
+  <button onclick="
+   Calculate();
+  
+  ">Calculate</button>
+  <p class="pgraph"></p>
+  <script>
+   
+   function Calculate(){
+   const inputElement = document.querySelector('.input');
+    let cost = Number(inputElement.value);
+    if (cost <= 40) {
+      cost = cost + 10;
+    }
+    document.querySelector('.pgraph').innerHTML = `$${cost}`;
+    inputElement.value = ' ';
+   }
+   
+  </script>
+</body>
+</html>

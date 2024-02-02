@@ -10,8 +10,20 @@
     //object store multi value together.
      const product = {
       name: 'socks',
-      price: 1090
+      price: 1090,
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      
+      //function inside object
+      fun: function function1(){
+        console.log('function inside object');
+      }
      };
+
+     product.name = 'good ones';
+     console.log(product);
      console.log(product.name); 
      console.log(product.price);
      product.name = 'cotton socks';
@@ -19,6 +31,12 @@
      product.newProduct = true;
      console.log(product);
      console.log(product['name']);
+     console.log(product.rating.count);
+     console.log(product['price']);
+     product.fun();
+     console.log(typeof console);
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());
   </script>
 </body> 
 </html>

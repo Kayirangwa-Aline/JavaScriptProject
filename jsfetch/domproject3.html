@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom project3</title>
+  <style>
+   button{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+   }
+   input{
+    border: 2px solid black;
+    font-size: 20px;
+   }
+   p{
+    font-size: 20px;
+   }
+  .imgb{
+    background-color: transparent;
+  }
+
+  </style>
+</head>
+<body>
+  <input placeholder="type your name" class="input"> <button onclick="
+   submit()">Submit</button>
+  <p class="para"></p>
+  <script>
+  function submit(){
+    const inputEl = document.querySelector('.input');
+    let name = inputEl.value;
+  document.querySelector('.para').innerHTML = `Your name is: ${name}`;
+  inputEl.value = '';
+  }
+  </script>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="aline.css">
    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 </head>
 <body class="body">
@@ -17,14 +18,20 @@
         <img src="2.jpg" alt="logo image" width="100px" height="80px" style="border-radius: 15px;">
         <p class="text-white">My Port<span class="text-warning">folio</span></p> 
         </div>  
-      <ul>
-        <li><a href="about.html" class="text-warning" >Home</a></li>
-        <li><a href="#About" class="text-warning" >About</a></li>
-        <li><a href="#Services" class="text-warning">Services</a></li>
+      <ul id="sidemenu"> 
+        <li><a href="about.html" class="text-warning active">Home</a></li>
+        <li><a href="#About" class="text-warning">About</a></li>
+        <li><a href="#Services" class="text-warning">Services</a></li> 
         <li><a href="#Projects" class="text-warning">Projects</a></li>
         <li><a href="#Contacts" class="text-warning">Contacts</a></li>
+        <svg xmlns="http://www.w3.org/2000/svg" onclick="closemenu()" id="times-icon" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: msFilter;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
       </ul>
-    </nav>
+     <div id="menu-icon" onclick="openmenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: 
+      msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+     </div>
+  </nav>
+    
     <div class="info">
     <h3 class="text-white">Hello,It's <span class="text-warning">Me</span></h3>
     <br>
@@ -32,7 +39,7 @@
     <br>
     <h3 class="text-white">And I'm a <span class="text-warning">Front-End Developer and UX/UI Design</span></h3>
     <br>
-    <button type="button" class="btn btn-outline-light"> Download<a href="C:\Users\HP\Desktop\image portfolio"><span class="text-warning"><u> CV</u></span></a></button>
+    <a href="doc/My CV.pdf"><button type="button" class="btn btn-outline-light"> Download<span class="text-warning"><u> CV</u></span></button></a>
     </div>
     <br>
     <div class="social-media">
@@ -62,43 +69,26 @@
          </div> 
          <div class="col-lg-6 col-sm-12">
          <div class="about-text">
-          <h1>About<span class="text-warning"> Me</span></h1>
+          <h1 style="font-weight: 500; font-size: 30px;">About<span class="text-warning" style="font-weight: 500; font-size: 30px;"> Me</span></h1>
           <h2>Front-End Developer & UX/UI Design</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo velit earum eveniet iste esse dignissimos repellat ipsa perferendis. Repudiandae cupiditate reprehenderit deserunt porro, dolor itaque sed perspiciatis animi omnis deleniti.</p>
-          <div class="tab-titles">
-           <p class="tab-links active-link ">Coding Skills</p>
-           <p class="tab-links">Proffessional Skills</p>
-           <p class="tab-links">Education</p>
-          </div>
-          <!-- <div class="tab-contents">
-            <ul>
-              <li><span>Html</span></li>
-              <li><span>Css</span></li>
-              <li><span>Javascript</span></li>
-              <li><span>React</span></li>
-            
-            </ul>
-          </div>
-          <div class="tab-contents">
-            <ul>
-              <li><span>Communication Skills</span></li>
-              <li><span>Team Work</span></li>
-              <li><span>Digital marketing</span></li>
-              <li><span>react</span></li>
-            
-            </ul>
+          <p>I am a skilled with Information Technology and web designer in the industry.<br>
+             My Passion lies in creating captivating website designs and implementing them <br>
+             through frontend development. I take pride in staying up-to-date with current <br>
+             design trends and leveraging my creativity to produce visually appealing and 
+             user-friendly websites. Throughout my career, I have developed a deep understanding 
+             UX/UI principles. By putting myself in the shoes of the end-users, I strive to create 
+             intuitive and seamless browsing experiences. I believe that a well-designed website should 
+             not only look visually appealing but also provide a smooth and enjoyable interaction for visitors. 
+             When starting a new project, I thoroughly research and analyze the target audience and the client's
+             specific requirements. This enables me to tailor my designs to meet their expectations and deliver 
+             a unique online presence that aligns with their brand identity.</p>
+       
          </div>
-         <div class="tab-contents">
-          <ul>
-            <li><span>Bachelor's in Information Technical</span></li>
-           
-          </ul>
-         </div> -->
         </div>
       </div>
       </div>
-      <br>
-      <br> 
+  </div>
+    
       <!-- --------------------------------------------------Our Services----------------------------------------------------------- -->
       <!-- https://crustlab.com/blog/web-development-services/ -->
      <section class="services" id="Services">
@@ -109,26 +99,22 @@
       <div class="section-services">
         <div class="service-box">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="47" width="47" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>
         </div>
           <h3>UX/UI Dedign</h3> 
           <!-- https://www.appnovation.com/ux-design/user-experience-design-services -->
             <span>
               <p>UX Design</p>
               <p>Design Thinking</p>
-              <p>User Research & Analysis</p>
-              <p> UI and Interaction Design</p>
+              <p>User Research & Analysis</p>    
+              <p>UI and Interaction Design</p>
               <p>Rapid and Interaction Prototyping</p>
               <p>Mobile First and Responsive Design</p>
           </span>
-          <!-- <div class="btn-box service-btn">
-            <button>Read More</button>
-            <a href="#" class="btn">Read More</a> 
-        </div>  -->
         </div>
         <div class="service-box">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3 .8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2 .6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7 .8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="47" width="47" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3 .8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2 .6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7 .8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg>
           
         </div>
           <h3>Web Development</h3>
@@ -141,14 +127,10 @@
             <p>Web app development</p>
             <p>Web Devs Support and Maintenance</p>
         </span>
-           <!-- <div class="btn-box service-btn">
-             <button>Read More</button>
-
-          </div>  -->
         </div>
         <div class="service-box">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M576 240c0-23.6-13-44-32-55.1V32C544 23.3 537 0 512 0c-7.1 0-14.2 2.4-20 7l-85 68C364.3 109.2 310.7 128 256 128H64c-35.4 0-64 28.7-64 64v96c0 35.4 28.7 64 64 64h33.7c-1.4 10.5-2.2 21.1-2.2 32 0 39.8 9.3 77.4 25.6 110.9 5.2 10.7 16.5 17.1 28.4 17.1h74.3c26.1 0 41.7-29.8 25.9-50.6-16.4-21.5-26.2-48.4-26.2-77.4 0-11.1 1.6-21.8 4.4-32H256c54.7 0 108.3 18.8 151 53l85 68a32 32 0 0 0 20 7c24.9 0 32-22.8 32-32V295.1C563.1 284 576 263.6 576 240zm-96 141.4l-33.1-26.4C393 311.8 325.1 288 256 288v-96c69.1 0 137-23.8 191-67L480 98.6v282.8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="47" width="47" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#e0b61f" d="M576 240c0-23.6-13-44-32-55.1V32C544 23.3 537 0 512 0c-7.1 0-14.2 2.4-20 7l-85 68C364.3 109.2 310.7 128 256 128H64c-35.4 0-64 28.7-64 64v96c0 35.4 28.7 64 64 64h33.7c-1.4 10.5-2.2 21.1-2.2 32 0 39.8 9.3 77.4 25.6 110.9 5.2 10.7 16.5 17.1 28.4 17.1h74.3c26.1 0 41.7-29.8 25.9-50.6-16.4-21.5-26.2-48.4-26.2-77.4 0-11.1 1.6-21.8 4.4-32H256c54.7 0 108.3 18.8 151 53l85 68a32 32 0 0 0 20 7c24.9 0 32-22.8 32-32V295.1C563.1 284 576 263.6 576 240zm-96 141.4l-33.1-26.4C393 311.8 325.1 288 256 288v-96c69.1 0 137-23.8 191-67L480 98.6v282.8z"/></svg>
         </div>
           <h3>Digital Marketing</h3>
           <!-- https://www.reliablesoft.net/digital-marketing-services-list/ -->
@@ -160,18 +142,13 @@
             <p>Website Design & Development</p>
             <p>Search Engine Optimization(SEO)</p>
         </span>
-           <!-- <div class="btn-box service-btn">
-            <button>Read More</button>
-             <a href="#" class="btn">Read More</a> 
-
-          </div>  -->
         </div>
       </div> 
      </section>
       <!-- -------------------------------------------------------Our project-------------------------------------------------- -->
       <div id="Projects">
        <div class="container">
-       <h1 class="sub-title">My <span class="text-warning" style="font-weight: 700; font-size: 35px;"> Projects</span></h1>
+       <h1 class="sub-title" style="font-weight: 500; font-size: 30px;">My <span class="text-warning" style="font-weight: 500; font-size: 30px;"> Projects</span></h1>
        <div class="project-list">
         <div class="work">
         <img src="girl.jfif" alt="girl">
@@ -203,62 +180,11 @@
        </div>
        </div>
       </div>
-      <!-- <section class="skills" id="Projects">
-      <div class="main-text">
-        <h2>My Skills</h2> 
-      <span>Technical And Professional Skills</span>
-      </div>
-      <div class="skill-main">
-        <div class="skill-left">
-        <h3>Technical Skills</h3>
-        <div class="skill-bar">
-        <div class="info">
-         <p>Html</p>  
-         <p>72%</p>
-        </div>
-        <div class="bar">
-        <span class="html"></span>
-        </div>  
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-           <p>Css</p>
-           <p>90%</p>
-          </div>
-          <div class="bar">
-          <span class="css"></span>
-          </div>
-          </div>
-          <div class="skill-bar">
-            <div class="info">
-             <p>JavaScript</p> 
-             <p>80%</p>
-            </div>
-            <div class="bar">
-            <span class="javascript"></span>
-            </div>
-            </div>
-            <div class="skill-bar">
-              <div class="info">
-               <p>Figma</p>
-               <p>62%</p>
-              </div>
-              <div class="bar">
-              <span class="figma"></span>
-              </div>
-              </div>
-        </div>
-        <div class="skill-right">
-          <h3>Professional Skills</h3>
-          
-          </div>
-      </div>
-
-      </section> -->
+   
       <!-- ---------------------------------------------aboutcontactpape------------------------------------------------------- -->
           
       <div class="Contact" id="Contacts">
-        <h3 class="text-center">Contact-<span class="text-warning">Me!</span></h3>
+        <h3 class="conname" style="font-weight: 500; font-size: 30px;">Contact-<span class="text-warning" style="font-weight: 500; font-size: 30px;">Me!</span></h3>
         <div class="container">
           <div class="row mt-5">
             <div class="col-lg-4">
@@ -281,7 +207,7 @@
             </div>
             <br>
              <div class="email">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: #fff;transform: msFilter;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="email-icon" width="40" height="40" viewBox="0 0 24 24" style="fill: #fff;transform: msFilter;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path></svg>
               <div>
                 <h4 class="text-warning">Email</h4>
                 <p> Kayirangwa1aline@gmail.com</p>
@@ -291,32 +217,62 @@
              </div>
             </div>
             </div>
-          <div class="col-lg-8 mt-5 mt-lg-0" class="formc">
-            <form action="#" >
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form name="" method="POST"class="formc">
               <div class="row">
               <div class="col-md-6 form-group" >
 
-                <h4 class=" form-bg-dark">Send Message</h4>
+                <h4>Send Message</h4>
         <div class="mb-3 mt-3">
           <label for="FirstName" class="form-label">Full Name:</label>
-          <input type="FirstName" class="form-control" id="FirstName" placeholder="Enter your FirstName" name="FirstName" size="4" required>
+          <input type="FullName" class="form-control" id="FullName" placeholder="Enter your Full Name" name="FullName" size="20" required>
         </div>
           <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email:</label>
-            <input type="email"class="form-control" id="Email" placeholder="Enter your Email" required>
+            <input type="email"class="form-control" id="Email" placeholder="Enter your Email" name="Email" size="20" required> 
           </div>
           <label for="Message" class="form-label">Your Message:</label>
           <div>
-          <textarea class="" name="text" id="" cols="50" rows="9" placeholder="type your Message here:"></textarea>
+          <textarea class="" name="Message" id="area" cols="50" rows="9" placeholder="Type Your Message Here:" required></textarea>
           </div>
           <br>
-          <button type="button" class="btn btn-primary" onclick="alert('Successfully Sent!!')">Send</button>
+          <button type="submit" class="btn btn-outline-light" onclick="">Submit</button>
       </form>
       
-    
               </div>
+              <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+              <script>
+                
+                function SendEmail(){
+                  email.send({
+                    
+                    To: "kylealine1@gmail.com",
+                    From: 'kayirangwa1aline@gmail.com',
+                    Subject: "This is the subject",
+                    Body: "This  is the Message"
+                  }
+
+                  ).then(
+                    message => {
+                      if(message=='ok'){
+                        swal("Message sent Successfully!!", "You clicked the button!", "success"); 
+                      }else{
+                        swal("Error, Please try again!!", "You clicked the button!", "Error"); 
+                      }
+                    }
+                  );
+                }
+              </script>
               </div>
+
           </div>
           </div>
+          <br>
+          <br>
+          <hr class="line">
+          <div class="footer">
+            <p>Copyright@2023 by Aline Kayirangwa | All Rights Reserved.</p>
+          </div>
+          <script src="aline.js"></script>
 </body>
-</html>
+</html

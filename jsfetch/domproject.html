@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom project</title>
+  <style>
+     button{
+    background-color: green;
+    color: white;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+   }
+   p{
+    font-size: 20px;
+   }
+   .is-sub{
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: none;
+   }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+   sub();
+  " class="js-sub-btn">
+    Subscribe
+</button>
+  <!-- <p> Rock Paper Scissors</p> -->
+  <script>
+    function sub() {
+      const buttonEl = document.querySelector('.js-sub-btn');
+      if(buttonEl.innerText === 'subscribe'){
+        buttonEl.innerHTML = 'subscribed';
+        buttonEl.classList.add('is-sub');
+      }else{
+        buttonEl.innerHTML = 'subscribe';
+        buttonEl.classList.remove('is-sub');
+      } 
+        }
+  </script>
+</body>   
+</html> 
